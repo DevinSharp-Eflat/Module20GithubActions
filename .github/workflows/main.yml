@@ -1,5 +1,4 @@
 name: Module20Workflow
-# this is a code change
 
   # Trigger workflow on all pull requests
 on:
@@ -36,4 +35,5 @@ jobs:
       - name: Run Tests
         uses: cypress-io/github-action@v6.7.7
         with: 
+          build: npm run build
           start: npm run start
