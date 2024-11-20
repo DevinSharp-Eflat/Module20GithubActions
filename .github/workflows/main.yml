@@ -1,5 +1,5 @@
 name: Module20Workflow
-# uses: cypress-io/github-action@v6.7.7
+
 
   # Trigger workflow on all pull requests
 on:
@@ -38,4 +38,6 @@ jobs:
 
       # Run tests
       - name: Run Tests
-        run: npm run test
+        uses: cypress-io/github-action@v6.7.7
+        with: 
+          start: npm run start
