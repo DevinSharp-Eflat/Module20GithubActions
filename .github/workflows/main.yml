@@ -37,3 +37,4 @@ jobs:
         with: 
           build: npm run build
           start: npm run start
+          wait-on: "https://localhost:3001"
