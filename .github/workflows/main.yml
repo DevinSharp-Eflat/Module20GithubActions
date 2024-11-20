@@ -1,5 +1,4 @@
 name: Module20Workflow
-# test run
   # Trigger workflow on all pull requests
 on:
   pull_request:
@@ -22,6 +21,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 21.x
+
+      - name: MongoDB in GitHub Actions
+        uses: supercharge/mongodb-github-action@1.11.0
+        with: 
+          mongodb-version: 8.0
+      
 
       # Install dependencies
       - name: 🧰 Install Deps
